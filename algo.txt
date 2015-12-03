@@ -1,0 +1,71 @@
+Declaration :
+  const d-ref = 30
+  const dtemp-ref =
+  bool preparation
+  bool hot
+  bool request
+  bool up
+  bool on
+  var temp1 = 100
+  var temp2 = 0
+  var d
+
+Fonction:
+  Up
+  Down
+  TurnOn
+  AlertPreparation
+  WaitStart //waiting 2min
+  WaitTemp
+  MesureTemp
+  MesureDistance
+  Shed
+  Rotate
+  MovePlate
+  ReturnPlate
+  Aspirate
+  UpPlate
+  DownPlate
+  Time
+  Blow
+
+Start:
+  if request=1 and preparation=1 then
+      if on = 0 then
+        if up=0 then
+            do Up
+            up = 1
+        end
+        do TurnOn
+        on = 1
+        do WaitStart
+        do Down
+        While temp1 - temp2 > dtemp-ref then
+          do Mesure
+          temp1 = Mesure
+          do WaitTemp
+          do Mesure
+          temp2 = Mesure
+        end
+      end
+      do Shed
+      do Rotate
+      do Up
+      if Time = 1 then
+        do MovePlate
+        do Aspirate
+        do ReturnPlate
+        do MesureDistance
+        d = MesureDistance
+        While d > d-ref
+          do MesureDistance
+          d = MesureDistance
+          do DownPlate
+        end
+        do Blow
+
+  else if request=1 then
+    do AlertPreparation
+  else
+    TurnOff
+  end
