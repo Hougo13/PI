@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interface</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="views" id="cmd">
+      <div class="columns" id="col-1">
+        <h2 id="cmd-select">0</h2>
+      </div>
+      <div class="columns" id="col-2">
+        <div class="rows" value="1">
+          <span class="cmd-glyph glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+        </div>
+        <div class="rows" value="-1">
+          <span class="cmd-glyph glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="views" id="work" hidden>
+      <div id="time-container">
+        <h1 id="time">15:47</h1>
+      </div>
+      <div id="progress-container">
+        <div class="progress" id="progress">
+          <div class="progress-bar" id="progress-bar"> </div>
+        </div>
+      </div>
+      <div id="count-container">
+        <h5 id="count">6/10</h5>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

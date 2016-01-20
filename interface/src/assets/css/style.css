@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.columns{
+  float: left;
+  height: 100%;
+  text-align: center;
+}
+
+#col-1{
+  width: 60%;
+  display: table;
+}
+
+#col-2{
+  width: 40%;
+}
+
+.rows{
+  height: 50%;
+  margin: auto;
+  display: table;
+}
+
+.cmd-glyph{
+  font-size: 15vw;
+  display: table-cell;
+  vertical-align: middle;
+  top: 0;
+}
+
+#cmd-select{
+  font-size: 25vw;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.views{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#time-container{
+  height: 50%;
+  margin: auto;
+  display: table;
+}
+
+#time{
+  font-size: 20vw;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#progress-container{
+  height: 30%;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: table;
+}
+
+#progress{
+  height: 10vw;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#count-container{
+  height: 20%;
+  margin: auto;
+  display: table;
+}
+
+#count{
+  font-size: 10vw;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
