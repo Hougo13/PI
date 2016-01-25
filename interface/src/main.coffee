@@ -5,7 +5,8 @@ app = electron.app
 BrowserWindow = electron.BrowserWindow
 
 createWindow = ->
-  mainWindow = new BrowserWindow {width: 800, height: 600, fullscreen: true}
+  # mainWindow = new BrowserWindow {fullscreen: true}
+  mainWindow = new BrowserWindow {width: 800, height: 600}
 
   mainWindow.setMenuBarVisibility false
 

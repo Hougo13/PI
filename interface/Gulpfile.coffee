@@ -14,12 +14,16 @@ gulp.task 'default', (cb) ->
 gulp.task 'build', (cb) ->
   sequence 'clean:build', ['modules', 'assets', 'app', 'main'], cb
 
+gulp.task 'dev', (cb) ->
+  sequence ['assets', 'app', 'main'], 'start', 'watch', cb
+
 gulp.task 'start', ->
   gulp.src 'build'
     .pipe electron()
 
 gulp.task 'watch', ->
-  gulp.watch ['package.json', 'src/assets/**/*'], ['build', electron.rerun]
+  gulp.watch ['package.json'], ['build', electron.rerun]
+  gulp.watch ['src/assets/**/*'], ['assets', electron.rerun]
   gulp.watch ['src/app/**/*.coffee'], ['app', electron.rerun]
   gulp.watch ['src/main.coffee'], ['main', electron.rerun]
 
