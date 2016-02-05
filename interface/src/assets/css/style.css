@@ -88,6 +88,25 @@ body {
   vertical-align: middle;
 }
 
+.row-img{
+    display: table;
+    margin: auto;
+    width: 100%;
+    height: 75vh;
+}
+
+.img-container{
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    width: 60vw;
+    height: 60vh;
+}
+
+.img-menu{
+    height: 60vh; 
+}
+
 /*#count-container{
   height: 20%;
   margin: auto;
