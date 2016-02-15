@@ -1,8 +1,3 @@
-jQuery = $ = require 'jquery'
-EventEmitter = require 'events'
-
-events = new EventEmitter()
-
 class cmd
   constructor: ->
     @select = 0
@@ -24,4 +19,3 @@ class cmd
       callback @select
 
 ctr_cmd = new cmd()
-console.log ctr_cmd
