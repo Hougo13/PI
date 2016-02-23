@@ -54,7 +54,7 @@ body {
   padding: 0;
 }
 
-#time-container{
+.time-container{
   height: 40%;
   margin: auto;
   display: table;
@@ -67,25 +67,39 @@ body {
   vertical-align: middle;
 }
 
-#anim-container{
-  height: 50%;
-  margin: auto;
-  display: table;
-}
 
-#progress-container{
-  height: 10%;
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  display: table;
+.progress-container{
+  height: 10vh;
+  width: 90%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
 }
 
 #progress{
-  height: 100%;
+  height: 50%;
+}
+
+.count-container{
+    display: block;
+    height: 30%;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    display: table;
+    bottom: 0;
+    text-align: center;
+}
+
+#count{
+  font-size: 10vw;
+  margin: 0;
   display: table-cell;
   vertical-align: middle;
+
 }
 
 .row-img{

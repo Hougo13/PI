@@ -7,6 +7,7 @@ install = require 'gulp-install'
 sequence = require 'gulp-sequence'
 concat = require 'gulp-concat'
 coffee = require 'gulp-coffee'
+plumber =  require 'gulp-plumber'
 
 gulp.task 'default', (cb) ->
   sequence 'build', 'start', 'watch', cb
@@ -36,6 +37,7 @@ gulp.task 'assets', ->
 
 gulp.task 'app', ->
   gulp.src 'src/app/**/*.coffee'
+    .pipe plumber()
     .pipe coffee {bare: true}
     .pipe concat 'app.js'
     .pipe gulp.dest 'build/js'
