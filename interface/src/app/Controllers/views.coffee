@@ -1,3 +1,4 @@
+viewSecu = 0
 view = 0
 views = {
   0: 'menu',
@@ -8,7 +9,10 @@ views = {
 }
 
 setView = (nxt) ->
-  console.log views[view]+' to '+views[nxt]
-  $('#'+views[view]).fadeOut 'slow', ->
-    $('#'+views[nxt]).fadeIn()
-    view = nxt
+  if !viewSecu
+    console.log views[view]+' to '+views[nxt]
+    viewSecu = 1
+    $('#'+views[view]).fadeOut 'slow', ->
+      $('#'+views[nxt]).fadeIn()
+      view = nxt
+      viewSecu = 0

@@ -6,3 +6,6 @@ $("#col-1").click ->
 $(".rows").click ->
   ctr_cmd.selector parseFloat($(this).attr("value")), (disp) ->
     $("#cmd-select").text disp
+
+$('.cmd-return-container').click ->
+  setView 0

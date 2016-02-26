@@ -90,7 +90,7 @@ body {
     margin: auto;
     position: absolute;
     display: table;
-    bottom: 0;
+    bottom: 10vh;
     text-align: center;
 }
 
@@ -99,6 +99,45 @@ body {
   margin: 0;
   display: table-cell;
   vertical-align: middle;
+
+}
+
+.cmd-return-container{
+  position: absolute;
+  width: 18%;
+  height: 17%;
+
+}
+
+#cmd-return{
+  padding-left: 3vw;
+  padding-top: 3vh;
+  font-size: 7vw;
+
+}
+
+.recette-container{
+
+
+}
+
+#recette{
+
+}
+
+.salee-container{
+
+}
+
+#salee{
+
+}
+
+.sucree-container{
+
+}
+
+#sucree{
 
 }
 

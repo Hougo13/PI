@@ -1,8 +1,8 @@
 $('#work').click ->
   setView 0
 
-# $('#work').dblclick ->
-#   setView 0
+$('.count-container').click ->
+  setView 1
 
 events.on 'todo', ->
   $('h5').text ctr_cmd.done+'/'+ctr_cmd.todo
