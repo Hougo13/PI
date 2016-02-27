@@ -8,6 +8,7 @@ sequence = require 'gulp-sequence'
 concat = require 'gulp-concat'
 coffee = require 'gulp-coffee'
 plumber =  require 'gulp-plumber'
+electronPckg = require 'gulp-atom-electron'
 
 gulp.task 'default', (cb) ->
   sequence 'build', 'start', 'watch', cb
@@ -21,6 +22,11 @@ gulp.task 'dev', (cb) ->
 gulp.task 'start', ->
   gulp.src 'build'
     .pipe electron()
+
+gulp.task 'compile', ['build'], ->
+  gulp.src 'build/**'
+    .pipe electronPckg {version: '0.36.8', platform: 'linux'}
+    .pipe gulp.dest 'dist'
 
 gulp.task 'watch', ->
   gulp.watch ['package.json'], ['build', electron.rerun]
